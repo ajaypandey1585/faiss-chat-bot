@@ -24,7 +24,7 @@ query = "financial year commencing"
 # print(docs)
 
 # 5 Set up the language model and query-answer chain
-llm = ChatOpenAI(api_key="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")
+llm = ChatOpenAI()
 qa_chain = RetrievalQA.from_chain_type(llm, retriever=new_db.as_retriever())
 #res = qa_chain({"query": "What does the financial year commencing mean?"})
 #print(res)
