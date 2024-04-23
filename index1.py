@@ -11,7 +11,7 @@ pages_content = loader.load_and_split()
 #print(len(pages_content), pages_content)
 
 # 3 Create embeddings and vector store
-embeddings = OpenAIEmbeddings(openai_api_key="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")
+embeddings = OpenAIEmbeddings(OPENAPIKEY)
 db = FAISS.from_documents(pages_content, embeddings)
 
 # Save and load the vector store
